@@ -1,0 +1,134 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        .input-group {
+            margin-bottom: 15px;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+    <a href='professor/stu_sem'>total students in a semester</a> 
+    <a href='professor/stu_year'>total students in a year</a> 
+    <a href='professor/tot_stu_sem_wise'>total students (semester wise)</a> 
+    <a href='professor/sub'>subject wise report</a> 
+    <a href='professor/topper'>topper list</a> 
+
+    
+ 
+</body>  {% endcomment %} 
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Professor Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:#a3f1ff; 
+            
+        }
+
+        .professor-links {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #007bff;
+            border-radius: 3px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="professor-links">
+        <a href='professor/stu_sem'>Total Students in a Semester</a>
+        <a href='professor/stu_year'>Total Students in a Year</a>
+        <a href='professor/tot_stu_sem_wise'>Total Students (Semester wise)</a>
+        <a href='professor/sub'>Subject Wise Report</a>
+        <a href='professor/topper'>Topper List</a>
+    </div>
+</body>
+
+</html>

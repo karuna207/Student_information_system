@@ -1,0 +1,224 @@
+{% comment %} {% comment %} <!DOCTYPE html>
+<html>
+<head>
+  <title>Subject Data</title>
+</head>
+<body>
+
+  <h1>Subject Data</h1>
+
+  <form method="get">
+    <label for="subject_name">Enter Subject Name:</label>
+    <input type="text" id="subject_name" name="subject_name">
+    <button type="submit">Search</button>
+  </form>
+
+  <hr>
+
+  {% if student_data %}
+    <h2>Student Information:</h2>
+    <ul>
+      {% for data in student_data %}
+        <li>Student Name: {{ data.0 }}</li>
+        <li>Course Name: {{ data.1 }}</li>
+        <li>Grade: {{ data.2 }}</li>
+        <br>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No student data found.</p>
+  {% endif %}
+
+</body>
+</html>
+ {% endcomment %}
+
+
+{% comment %} 
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Subject Data</title>
+   <style>
+     table {
+       border-collapse: collapse;
+       width: 100%;
+     }
+     th, td {
+       border: 1px solid #dddddd;
+       text-align: left;
+       padding: 8px;
+     }
+     th {
+       background-color: #f2f2f2;
+     }
+   </style>
+ </head>
+ <body>
+ 
+   <h1>Topper Data for Subject</h1>
+ 
+   <form method="get">
+     <label for="subject_name">Enter Subject Name:</label>
+     <input type="text" id="subject_name" name="subject_name"> 
+     <label for="num">Enter Number of Toppers:</label>
+     <input type="number" id="num" name="num">
+     <button type="submit">Search</button>
+   </form>
+ 
+   <hr>
+ 
+   {% if student_data %}
+     <h2>Student Information:</h2>
+     <table>
+       <thead>
+         <tr>
+           <th>register number</th>
+           <th>Student Name</th>
+           <th>ssn marks</th>
+           <th>year</th> 
+           
+         </tr>
+       </thead>
+       <tbody>
+         {% for data in student_data %}
+           <tr>
+             <td>{{ data.0 }}</td>
+             <td>{{ data.1 }}</td>
+             <td>{{ data.2 }}</td> 
+             <td>{{ data.3 }}</td> 
+            
+ 
+           </tr>
+         {% endfor %}
+       </tbody>
+     </table> 
+     <p>NUMBER OF STUDENTS ENROLLED ARE:{{nstudents}}</p>
+   {% endif %}
+ 
+   {% if show_message %}
+     <p>No student data found for the subject.</p>
+   {% endif %}
+ 
+ </body>
+ </html> {% endcomment %} 
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Topper Data for Subject</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color:#a3f1ff; 
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        button[type="submit"] {
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        .message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Topper Data for Subject</h1>
+    <form method="get">
+        <label for="subject_name">Enter Subject Name:</label>
+        <input type="text" id="subject_name" name="subject_name">
+        <label for="num">Enter Number of Toppers:</label>
+        <input type="number" id="num" name="num">
+        <button type="submit">Search</button>
+    </form>
+
+    <hr>
+
+    {% if student_data %}
+        <h2>Student Information:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Register Number</th>
+                    <th>Student Name</th>
+                    <th>SSN Marks</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in student_data %}
+                    <tr>
+                        <td>{{ data.0 }}</td>
+                        <td>{{ data.1 }}</td>
+                        <td>{{ data.2 }}</td>
+                        <td>{{ data.3 }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p>Number of students enrolled: {{ nstudents }}</p>
+    {% endif %}
+
+    {% if show_message %}
+        <p class="message">No student data found for the subject.</p>
+    {% endif %}
+</body>
+</html>
+
+  
